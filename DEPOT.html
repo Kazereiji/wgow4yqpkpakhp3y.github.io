@@ -1,0 +1,139 @@
+<!DOCTYPE>
+
+<html>
+<head><link href="img/favicon.ico" rel="shortcut icon"/>
+	<meta name="viewport" charset="UTF-8" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+	<link rel="stylesheet" href="css/line.css">
+
+</head>
+<body onload="myFunction()">
+
+<div style="width: 100%; height: 100%; background: white">
+	<div class="header">
+		<a>IMD Useful Info</a>
+		<img src="image/icon _arrow return_.png" onclick="javascript:location.href='index.html'">
+	</div>
+	
+	<div class="main">	
+		<div class="next1"></div>
+		<ul id="myUL" class="myUL">
+		
+		
+		<li>
+			<a href="station/kbd.html" class="dia3">
+				<div class="a1">KBD</div>
+				<div class="a2">Kowloon Bay Depot</div>
+				<div class="a3">九龍灣車廠</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/twd.html" class="dia3">
+				<div class="a1">TWD</div>
+				<div class="a2">Tsuen Wan Depot</div>
+				<div class="a3">荃灣車廠</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/cwd.html" class="dia3">
+				<div class="a1">CWD</div>
+				<div class="a2">Chai Wan Depot</div>
+				<div class="a3">柴灣車廠</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/tkd.html" class="dia3">
+				<div class="a1">TKD</div>
+				<div class="a2">Tseung Kwan O Depot</div>
+				<div class="a3">將軍澳車廠</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/shd.html" class="dia3">
+				<div class="a1">SHD</div>
+				<div class="a2">Siu Ho Wan Depot</div>
+				<div class="a3">小濠灣車廠</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/wcd.html" class="dia3">
+				<div class="a1">WCD</div>
+				<div class="a2">Wong Chuk Hang Depot</div>
+				<div class="a3">黃竹坑車廠</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/htd.html" class="dia3">
+				<div class="a1">HTD</div>
+				<div class="a2">Ho Tung Lau Depot</div>
+				<div class="a3">何東樓車廠</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/phd.html" class="dia3">
+				<div class="a1">PHD</div>
+				<div class="a2">Pat Heung Depot</div>
+				<div class="a3">八鄉車廠</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/tad.html" class="dia3">
+				<div class="a1">TAD</div>
+				<div class="a2">Tai Wai Depot</div>
+				<div class="a3">大圍車廠</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/tmd.html" class="dia3">
+				<div class="a1">TMD</div>
+				<div class="a2">Tuen Mun Depot</div>
+				<div class="a3">屯門車廠</div>
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+		
+		</ul>
+	</div>
+
+</div>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, loc, filter, ul, li, a, i, txtValue;
+  input = window.location.search;
+  loc = input.substring(input.lastIndexOf('=')+1, input.length);
+  filter = loc.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		li[i].style.display = "";
+    } 
+	else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+</body>
+</html>

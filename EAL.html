@@ -1,0 +1,198 @@
+<!DOCTYPE>
+
+<html>
+<head><link href="img/favicon.ico" rel="shortcut icon"/>
+	<meta name="viewport" charset="UTF-8" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+	<link rel="stylesheet" href="css/line.css">
+
+</head>
+<body onload="myFunction()">
+
+<div style="width: 100%; height: 100%; background: white">
+	<div class="header">
+		<a>IMD Useful Info</a>
+		<img src="image/icon _arrow return_.png" onclick="javascript:location.href='index.html'">
+	</div>
+	
+	<div class="main">	
+		<div class="next1"></div>
+		<ul id="myUL" class="myUL">
+		
+		<li>
+			<a href="pdf/Track Diagram/East Rail Line.pdf" target="_blank" class="dia2">
+				<div class="a1">EAL</div>
+				<div class="a2">Track Diagram</div>
+				<div class="a3">東鐵綫軌道配置圖</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/adm.html" class="dia">
+				<div class="a1">ADM</div>
+				<div class="a2">Admiralty</div>
+				<div class="a3">金鐘</div>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a href="station/exc.html" class="dia">
+				<div class="a1">EXC</div>
+				<div class="a2">Exhibition Centre</div>
+				<div class="a3">會展</div>
+			</a>
+		</li>
+		
+		
+		
+		<li>
+			<a href="station/huh.html" class="dia">
+				<div class="a1">HUH</div>
+				<div class="a2">Hung Hom</div>
+				<div class="a3">紅磡</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/mkk.html" class="dia">
+				<div class="a1">MKK</div>
+				<div class="a2">Mong Kok East</div>
+				<div class="a3">旺角東</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/kot.html" class="dia">
+				<div class="a1">KOT</div>
+				<div class="a2">Kowloon Tong</div>
+				<div class="a3">九龍塘</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/taw.html" class="dia">
+				<div class="a1">TAW</div>
+				<div class="a2">Tai Wai</div>
+				<div class="a3">大圍</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/sht.html" class="dia">
+				<div class="a1">SHT</div>
+				<div class="a2">Sha Tin</div>
+				<div class="a3">沙田</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/fot.html" class="dia">
+				<div class="a1">FOT</div>
+				<div class="a2">Fo Tan</div>
+				<div class="a3">火炭</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/rac.html" class="dia">
+				<div class="a1">RAC</div>
+				<div class="a2">Racecourse</div>
+				<div class="a3">馬場</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/uni.html" class="dia">
+				<div class="a1">UNI</div>
+				<div class="a2">University</div>
+				<div class="a3">大學</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/tap.html" class="dia">
+				<div class="a1">TAP</div>
+				<div class="a2">Tai Po Market</div>
+				<div class="a3">大埔墟</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/two.html" class="dia">
+				<div class="a1">TWO</div>
+				<div class="a2">Tai Wo</div>
+				<div class="a3">太和</div>
+			</a>
+		</li>
+				
+		<li>
+			<a href="station/fan.html" class="dia">
+				<div class="a1">FAN</div>
+				<div class="a2">Fanling</div>
+				<div class="a3">粉嶺</div>
+			</a>
+		</li>
+				
+		<li>
+			<a href="station/shs.html" class="dia">
+				<div class="a1">SHS</div>
+				<div class="a2">Sheung Shui</div>
+				<div class="a3">上水</div>
+			</a>
+		</li>
+				
+		<li>
+			<a href="station/low.html" class="dia">
+				<div class="a1">LOW</div>
+				<div class="a2">Lo Wu</div>
+				<div class="a3">羅湖</div>
+			</a>
+		</li>
+				
+		<li>
+			<a href="station/lmc.html" class="dia">
+				<div class="a1">LMC</div>
+				<div class="a2">Lok Ma Chau</div>
+				<div class="a3">落馬洲</div>
+			</a>
+		</li>
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		</ul>
+	</div>
+
+</div>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, loc, filter, ul, li, a, i, txtValue;
+  input = window.location.search;
+  loc = input.substring(input.lastIndexOf('=')+1, input.length);
+  filter = loc.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		li[i].style.display = "";
+    } 
+	else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+</body>
+</html>

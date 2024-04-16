@@ -1,0 +1,107 @@
+<!DOCTYPE>
+
+<html>
+<head><link href="img/favicon.ico" rel="shortcut icon"/>
+	<meta name="viewport" charset="UTF-8" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+	<link rel="stylesheet" href="css/line.css">
+
+
+</head>
+<body onload="myFunction()">
+
+<div style="width: 100%; height: 100%; background: white">
+	<div class="header">
+		<a>IMD Useful Info</a>
+		<img src="image/icon _arrow return_.png" onclick="javascript:location.href='index.html'">
+	</div>
+	
+	<div class="main">	
+		<div class="next1"></div>
+		<ul id="myUL" class="myUL">
+		
+		<li>
+			<a href="pdf/Track Diagram/AEL & TCL Line.pdf" target="_blank" class="dia2">
+				<div class="a1">ATD</div>
+				<div class="a2">Track Diagram</div>
+				<div class="a3">機場快綫、東涌綫軌道配置圖</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/hok.html" class="dia">
+				<div class="a1">HOK</div>
+				<div class="a2">Hong Kong</div>
+				<div class="a3">香港</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/kow.html" class="dia">
+				<div class="a1">KOW</div>
+				<div class="a2">Kowloon</div>
+				<div class="a3">九龍</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/tsy.html" class="dia">
+				<div class="a1">TSY</div>
+				<div class="a2">Tsing Yi</div>
+				<div class="a3">青衣</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/air.html" class="dia">
+				<div class="a1">AIR</div>
+				<div class="a2">Airport</div>
+				<div class="a3">機場</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/awe.html" class="dia">
+				<div class="a1">AWE</div>
+				<div class="a2">Asia-World Expo</div>
+				<div class="a3">博覽館</div>
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+		
+		</ul>
+	</div>
+
+</div>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, loc, filter, ul, li, a, i, txtValue;
+  input = window.location.search;
+  loc = input.substring(input.lastIndexOf('=')+1, input.length);
+  filter = loc.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		li[i].style.display = "";
+    } 
+	else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+</body>
+</html>

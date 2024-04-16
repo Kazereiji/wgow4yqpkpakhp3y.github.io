@@ -1,0 +1,189 @@
+<!DOCTYPE>
+
+<html>
+<head><link href="img/favicon.ico" rel="shortcut icon"/>
+	<meta name="viewport" charset="UTF-8" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+	<link rel="stylesheet" href="css/line.css">
+
+</head>
+<body onload="myFunction()">
+
+<div style="width: 100%; height: 100%; background: white">
+	<div class="header">
+		<a>IMD Useful Info</a>
+		<img src="image/icon _arrow return_.png" onclick="javascript:location.href='index.html'">
+	</div>
+	
+	<div class="main">	
+		<div class="next1"></div>
+		<ul id="myUL" class="myUL">
+		
+		
+		
+		<li>
+			<a href="station/cht.html" class="dia">
+				<div class="a1">CHT</div>
+				<div class="a2">Chek Lap Kok Tracion Substation</div>
+				<div class="a3">赤鱲角牽引配電站</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/elt.html" class="dia">
+				<div class="a1">ELT</div>
+				<div class="a2">East Lantau Tracion Substation</div>
+				<div class="a3">東大嶼山道口通風樓</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/hic.html" class="dia">
+				<div class="a1">HIC</div>
+				<div class="a2">Hong Kong Cooling Water Intake</div>
+				<div class="a3">香港海水泵房</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/hpb.html" class="dia">
+				<div class="a1">HPB</div>
+				<div class="a2">Hong Kong Power Supply Building</div>
+				<div class="a3">香港供電大樓</div>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a href="station/hvb.html" class="dia">
+				<div class="a1">HVB</div>
+				<div class="a2">Hong Kong Ventilation Building</div>
+				<div class="a3">香港通風樓</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/kic.html" class="dia">
+				<div class="a1">KIC</div>
+				<div class="a2">Kowloon Cooling Water Intake</div>
+				<div class="a3">九龍海水泵房</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/kvb.html" class="dia">
+				<div class="a1">KVB</div>
+				<div class="a2">Kowloon Ventilation Building</div>
+				<div class="a3">九龍通風樓</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/lct.html" class="dia">
+				<div class="a1">LCT</div>
+				<div class="a2">Lai Chi Kok Tracion Substation</div>
+				<div class="a3">荔枝角牽引配電站</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/sst.html" class="dia">
+				<div class="a1">SST</div>
+				<div class="a2">Sham Shui Kok Tracion Substation</div>
+				<div class="a3">深水角牽引配電站</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/tkv.html" class="dia">
+				<div class="a1">TKV</div>
+				<div class="a2">Tai Kok Tsui Ventilation Building</div>
+				<div class="a3">大角咀通風樓</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/tts.html" class="dia">
+				<div class="a1">TTS</div>
+				<div class="a2">Tai Kok Tsui Tracion Substation</div>
+				<div class="a3">大角咀牽引配電站</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/tut.html" class="dia">
+				<div class="a1">TUT</div>
+				<div class="a2">Tung Chung Tracion Substation</div>
+				<div class="a3">東涌牽引配電站</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/tvb.html" class="dia">
+				<div class="a1">TVB</div>
+				<div class="a2">Tsing Yi Ventilation Building</div>
+				<div class="a3">青衣通風樓</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/tyt.html" class="dia">
+				<div class="a1">TYT</div>
+				<div class="a2">Tsing Yi Tracion Substation</div>
+				<div class="a3">青衣牽引配電站</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/yot.html" class="dia">
+				<div class="a1">YOT</div>
+				<div class="a2">Yam O Tracion Substation</div>
+				<div class="a3">陰澳牽引配電站</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/sdt.html" class="dia">
+				<div class="a1">SDT</div>
+				<div class="a2">Siu Ho Wan Tracion Substation</div>
+				<div class="a3">小濠灣牽引配電站</div>
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+		
+		</ul>
+	</div>
+
+</div>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, loc, filter, ul, li, a, i, txtValue;
+  input = window.location.search;
+  loc = input.substring(input.lastIndexOf('=')+1, input.length);
+  filter = loc.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		li[i].style.display = "";
+    } 
+	else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+</body>
+</html>

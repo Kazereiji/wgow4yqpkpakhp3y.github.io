@@ -1,0 +1,126 @@
+<!DOCTYPE>
+
+<html>
+<head><link href="img/favicon.ico" rel="shortcut icon"/>
+	<meta name="viewport" charset="UTF-8" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">	
+	<link rel="stylesheet" href="../css/station.css">
+</head>
+<body>
+
+
+	<div class="header">
+		<a>IMD Useful Info</a>
+		<img src="../image/icon _arrow return_.png" onclick="history.back()">
+	</div>
+
+	<div class="main">				
+			<a class="dia">		
+				<div class="a1">EAP26</div>
+				<div class="a2">Ng Lau Road</div>
+				<div class="a3">五柳路</div>
+			</a>
+			<div class="next51"></div>
+			<a href="tel:2214 2800" class="E1F0EB">
+				<div class="pos">SC RM. (WEM)</div>
+				<div class="phone">2214 2800</div>				
+			</a>
+			
+			<a href="tel:9100 8671" class="E1F0EB">
+				<div class="pos">SC RM. (WEM2)</div>
+				<div class="phone">9100 8671</div>				
+			</a>
+			
+
+
+			<a href="tel:2212 2361" class="F3EBC6">
+				<div class="pos">TC (TML1 NAC - TUM)</div>
+				<div class="phone">2212 2361</div>
+			</a>
+			<a href="tel:2212 2362" class="F3EBC6">
+				<div class="pos">TC (TML2 DIH - AUS)</div>
+				<div class="phone">2212 2362</div>
+			</a>
+			<a href="tel:2212 2363" class="F3EBC6">
+				<div class="pos">TC (TML3 WKS - HIK)</div>
+				<div class="phone">2212 2363</div>
+			</a>
+			<a href="tel:2212 2391" class="FAEEBC">
+				<div class="pos2">TC (TML1 NAC - TUM)<br>Possession</div>
+				<div class="phone2">2212 2391</div>
+			</a>
+			<a href="tel:2212 2392" class="FAEEBC">
+				<div class="pos2">TC (TML2 DIH - AUS)<br>Possession</div>
+				<div class="phone2">2212 2392</div>
+			</a>
+			<a href="tel:2212 2393" class="FAEEBC">
+				<div class="pos2">TC (TML3 WKS - HIK)<br>Possession</div>
+				<div class="phone2">2212 2393</div>
+			</a>
+
+			<a href="tel:2212 2782" class="FFE6D3">
+				<div class="pos">IECC (TML / SIL)</div>
+				<div class="phone">2212 2782</div>
+			</a>
+
+			<a href="tel:2212 2484" class="FDDFDF">
+				<div class="pos">PSC (TML)</div>
+				<div class="phone">2212 2484</div>
+			</a>
+			<a class="cd" >
+				<div class="diag">Circuit Diagram</div>
+			</a>
+			<div class="button-wrapper" align="center">					
+				<input type="button" class="button" value="TML 25kV&#13;&#10;Circuit" onclick="pdf1()">
+
+				<input type="button" class="button" value="WRL 3.3kV&#13;&#10;Circuit " onclick="pdf3()">
+				<br>
+				<input type="button" class="buttonlong" value="TML Tension Length" onclick="pdf4()">
+			</div>
+		<!--	<div class="co6" align="center">
+				<input type="button" class="buttonlong2" value="Station and Ancillary Building" onclick="pdf5()">
+			</div> -->
+			<a class="co7">
+				<div class="diag">MAP 地圖</div>
+			</a>
+			<div class="co7_2" align="center">
+				<input type="button" class="mbutton" value="高德地圖" onclick="map1()">
+				<input type="button" class="mbutton" value="Google Map" onclick="map2()">
+			</div>
+			<div class="co8">
+				<div class="diag">Remark</div>
+			</div>
+			<div class="co8_2">
+				<a class="LL">Landlord - SIH (兆康)</a>
+			</div>
+</div>
+
+
+
+</div>
+
+<script>
+function pdf1(){
+	window.open("../pdf/TML/TML 25kV Circuit.pdf","_blank")
+}
+function pdf2(){
+	window.open("../pdf/DC Circuit/AT&D DC Circuit (2).pdf","_blank")
+}
+function pdf3(){
+	window.open("../pdf/TML/WRL_3.3kV circuit.pdf","_blank")
+}
+function pdf4(){
+	window.open("../pdf/Tension Length/TML Tension Length.pdf","_blank")
+}
+function pdf5(){
+	window.open("../pdf/Station and Ancillary Building Drawings/S&A_TML3.pdf#page=155","_blank")
+}
+function map1(){
+	window.open("https://surl.amap.com/54KqTH5bcli","_blank")
+}
+function map2(){
+	window.open("https://goo.gl/maps/ctFVQ4cJtKPAsZRP6","_blank")
+}
+</script>
+</body>
+</html>

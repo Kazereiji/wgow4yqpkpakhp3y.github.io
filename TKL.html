@@ -1,0 +1,129 @@
+<!DOCTYPE>
+
+<html>
+<head><link href="img/favicon.ico" rel="shortcut icon"/>
+	<meta name="viewport" charset="UTF-8" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+	<link rel="stylesheet" href="css/line.css">
+
+</head>
+<body onload="myFunction()">
+
+<div style="width: 100%; height: 100%; background: white">
+	<div class="header">
+		<a>IMD Useful Info</a>
+		<img src="image/icon _arrow return_.png" onclick="javascript:location.href='index.html'">
+	</div>
+	
+	<div class="main">	
+		<div class="next1"></div>
+		<ul id="myUL" class="myUL">
+		
+		<li>
+			<a href="pdf/Track Diagram/Tseung Kwan O Line.pdf" target="_blank" class="dia2">
+				<div class="a1">TKL</div>
+				<div class="a2">Track Diagram</div>
+				<div class="a3">將軍澳綫軌道配置圖</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/nop.html" class="dia">
+				<div class="a1">NOP</div>
+				<div class="a2">North Point</div>
+				<div class="a3">北角</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/qub.html" class="dia">
+				<div class="a1">QUB</div>
+				<div class="a2">Quarry Bay</div>
+				<div class="a3">鰂魚涌</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/yat.html" class="dia">
+				<div class="a1">YAT</div>
+				<div class="a2">Yau Tong</div>
+				<div class="a3">油塘</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/tik.html" class="dia">
+				<div class="a1">TIK</div>
+				<div class="a2">Tiu Keng Leng</div>
+				<div class="a3">調景嶺</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/tko.html" class="dia">
+				<div class="a1">TKO</div>
+				<div class="a2">Tseung Kwan O</div>
+				<div class="a3">將軍澳</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/hah.html" class="dia">
+				<div class="a1">HAH</div>
+				<div class="a2">Hang Hau</div>
+				<div class="a3">坑口</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/poa.html" class="dia">
+				<div class="a1">POA</div>
+				<div class="a2">Po Lam</div>
+				<div class="a3">寶琳</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/lhp.html" class="dia">
+				<div class="a1">LHP</div>
+				<div class="a2">LOHAS Park</div>
+				<div class="a3">康城</div>
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		
+		
+		</ul>
+	</div>
+
+</div>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, loc, filter, ul, li, a, i, txtValue;
+  input = window.location.search;
+  loc = input.substring(input.lastIndexOf('=')+1, input.length);
+  filter = loc.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		li[i].style.display = "";
+    } 
+	else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+</body>
+</html>
