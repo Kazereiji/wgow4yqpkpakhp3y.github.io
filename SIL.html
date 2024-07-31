@@ -1,0 +1,104 @@
+<!DOCTYPE>
+
+<html>
+<head><link href="img/favicon.ico" rel="shortcut icon"/>
+	<meta name="viewport" charset="UTF-8" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+	<link rel="stylesheet" href="css/line.css">
+
+
+</head>
+<body onload="myFunction()">
+
+<div style="width: 100%; height: 100%; background: white">
+	<div class="header">
+		<a>IMD Useful Info</a>
+		<img src="image/icon _arrow return_.png" onclick="javascript:location.href='index.html'">
+	</div>
+	
+	<div class="main">	
+		<div class="next1"></div>
+		<ul id="myUL" class="myUL">
+		
+		<li>
+			<a href="pdf/Track Diagram/South Island Line.pdf" target="_blank" class="dia2">
+				<div class="a1">SIL</div>
+				<div class="a2">Track Diagram</div>
+				<div class="a3">南港島綫軌道配置圖</div>
+			</a>
+		</li>
+		
+		
+		<li>
+			<a href="station/adm(南港島綫).html" class="dia">
+				<div class="a1">ADM</div>
+				<div class="a2">Admiralty (South Island Line)</div>
+				<div class="a3">金鐘 (南港島綫)</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/ocp.html" class="dia">
+				<div class="a1">OCP</div>
+				<div class="a2">Ocean Park</div>
+				<div class="a3">海洋公園</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/wch.html" class="dia">
+				<div class="a1">WCH</div>
+				<div class="a2">Wong Chuk Hang</div>
+				<div class="a3">黃竹坑</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/let.html" class="dia">
+				<div class="a1">LET</div>
+				<div class="a2">Lei Tung</div>
+				<div class="a3">利東</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="station/soh.html" class="dia">
+				<div class="a1">SOH</div>
+				<div class="a2">South Horizons</div>
+				<div class="a3">海怡半島</div>
+			</a>
+		</li>
+		
+		
+
+		
+		</ul>
+	</div>
+
+</div>
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, loc, filter, ul, li, a, i, txtValue;
+  input = window.location.search;
+  loc = input.substring(input.lastIndexOf('=')+1, input.length);
+  filter = loc.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		li[i].style.display = "";
+    } 
+	else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+</body>
+</html>
